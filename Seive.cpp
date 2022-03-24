@@ -1,12 +1,13 @@
 //SeiveAlgorithm
+//To count the prime numbers with in the given range
 #include<iostream>
 using namespace std;
 
-void Seive(int n,bool primes[]);
+void Seive(int n,bool primes[]);        //Seive Declaration
 int main(){
     int n;
-    cout<<"Enter the range to count prime"<<"\n";
-    cin>>n;
+    cout<<"Enter the range to count prime"<<"\n";       
+    cin>>n;                 //user input
     int count=0;
     bool primes[n+1];
     Seive(n,primes);        //Calling Seive Function
@@ -15,9 +16,9 @@ int main(){
             count++;
         }
     }
-    cout<<count;
+    cout<<count;            
 }
-void Seive(int n,bool primes[]){
+void Seive(int n,bool primes[]){        //Seive Function
     for(int i=0;i<n;i++){
         primes[i]=true;
     }
